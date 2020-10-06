@@ -1,12 +1,12 @@
-# Bundler example
+# Bundler
 
-Bundler example to make developing code easier and scalable.
+Bundler to make developing code easier and scalable.
 
 There is no weird code styles, because most of the configuration is as basic as it can be. A good example of this is by looking at the `.prettierrc.json` file.
 
 ## Table of contents
 
-- [Bundler example](#bundler-example)
+- [Bundler](#bundler)
   - [Table of contents](#table-of-contents)
   - [Why use a bundler](#why-use-a-bundler)
   - [Usage](#usage)
