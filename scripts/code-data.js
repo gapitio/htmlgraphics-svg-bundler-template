@@ -13,7 +13,7 @@ function isValidJSONString(str) {
   return true;
 }
 
-function exportCodeData() {
+function exportJSON() {
   const codeData = readFileSync(IN_PATH, "utf8");
 
   if (isValidJSONString(codeData)) {
@@ -22,4 +22,4 @@ function exportCodeData() {
   }
 }
 
-export default exportCodeData();
+export default exportJSON();
