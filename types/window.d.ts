@@ -1,6 +1,6 @@
 interface Window {
   htmlNode: typeof htmlNode;
-  codeData: typeof codeData;
+  customVariables: typeof customVariables;
   data: typeof data;
   options: typeof options;
   theme: typeof theme;

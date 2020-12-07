@@ -8,7 +8,7 @@ interface OptionsInterface {
   html: EditorCodeType;
   onRender: EditorCodeType;
   onInit: EditorCodeType;
-  codeData: EditorCodeType;
+  customVariables: EditorCodeType;
 }
 
 /**

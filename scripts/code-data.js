@@ -1,7 +1,7 @@
 import { writeFileSync, readFileSync } from "fs";
 
-const IN_PATH = "src/code-data.json";
-const OUT_PATH = "dist/code-data.json";
+const IN_PATH = "src/custom-variables.json";
+const OUT_PATH = "dist/custom-variables.json";
 
 function isValidJSONString(str) {
   try {
@@ -14,10 +14,10 @@ function isValidJSONString(str) {
 }
 
 function exportJSON() {
-  const codeData = readFileSync(IN_PATH, "utf8");
+  const customVariables = readFileSync(IN_PATH, "utf8");
 
-  if (isValidJSONString(codeData)) {
-    writeFileSync(OUT_PATH, codeData);
+  if (isValidJSONString(customVariables)) {
+    writeFileSync(OUT_PATH, customVariables);
     console.log("Successfully written " + OUT_PATH);
   }
 }

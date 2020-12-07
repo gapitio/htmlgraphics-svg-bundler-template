@@ -2,9 +2,9 @@
   Creates global variables used in on-init and on-render
 */
 
-import codeData from "../code-data.json";
+import customVariables from "../custom-variables.json";
 
-window.codeData = codeData;
+window.customVariables = customVariables;
 window.options = {
   add100Percentage: false,
   centerAlignContent: false,
@@ -13,5 +13,5 @@ window.options = {
   html: "",
   onRender: "",
   onInit: "",
-  codeData: "",
+  customVariables: "",
 };
