@@ -4,8 +4,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "run-s lint build:prod build:custom-variables build:svg-data",
-    "build:custom-variables": "node --experimental-json-modules ./scripts/custom-variables.js",
+    "build": "run-s lint build:prod build:custom-properties build:svg-data",
+    "build:custom-properties": "node --experimental-json-modules ./scripts/custom-properties.js",
     "build:dev": "rollup -c rollup.config.dev.js",
     "build:svg-data": "node ./scripts/svg-data.js",
     "build:prod": "rollup -c rollup.config.prod.js ",

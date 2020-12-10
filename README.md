@@ -55,7 +55,7 @@ When the code is ready to be uploaded to Grafana, start the build script
 yarn run build
 ```
 
-Then go to `/dist` and copy the contents of the files to the corresponding options in the panel. (custom-variables.json to customVariables, ETC)
+Then go to `/dist` and copy the contents of the files to the corresponding options in the panel. (custom-properties.json to customProperties, ETC)
 
 ## Dev site
 
@@ -63,7 +63,7 @@ Then go to `/dist` and copy the contents of the files to the corresponding optio
 
 To add custom series go to `src/dev-site/data.ts` and add createSeries() in series.
 
-Window has been used to get global variables like data, customVariables, ETC.
+Window has been used to get global variables like data, customProperties, ETC.
 
 ## Choices
 

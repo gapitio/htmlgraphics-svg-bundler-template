@@ -1,5 +1,5 @@
-import customVariablesJSON from "../../src/custom-variables.json";
+import customPropertiesJSON from "../../src/custom-properties.json";
 
 declare global {
-  const customVariables: typeof customVariablesJSON;
+  const customProperties: typeof customPropertiesJSON;
 }
