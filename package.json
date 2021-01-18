@@ -10,7 +10,12 @@
     "build:svg-data": "node ./scripts/svg-data.js",
     "build:prod": "rollup -c rollup.config.prod.js ",
     "dev": "run-p watch serve:dev",
-    "lint": "eslint . --ext .ts,.js && prettier --check .",
+    "fix": "run-s fix:eslint fix:prettier",
+    "fix:eslint": "eslint . --ext .ts,.js --fix",
+    "fix:prettier": "prettier --write .",
+    "lint": "run-s lint:eslint lint:prettier",
+    "lint:eslint": "eslint . --ext .ts,.js",
+    "lint:prettier": "prettier --check .",
     "serve": "sirv public --single --host",
     "serve:dev": "sirv public --single --host --dev",
     "watch": "rollup -c rollup.config.dev.js -w"
