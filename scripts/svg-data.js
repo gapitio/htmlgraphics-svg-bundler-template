@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from "fs";
 import Svgo from "svgo";
 import svgoConfig from "../svgo.config.js";
 
-const IN_PATH = "src/design/svg-data-inkscape.svg";
+const IN_PATH = "src/design/svg-data.svg";
 const OUT_PATH = "dist/svg-data.svg";
 
 const svgData = () => {
