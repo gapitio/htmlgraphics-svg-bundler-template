@@ -1,4 +1,4 @@
-import svgData from "../design/svg-data-inkscape.svg";
+import svgData from "../design/svg-data.svg";
 
 window.htmlNode = document
   .getElementById("shadow-container")
