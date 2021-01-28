@@ -1,4 +1,5 @@
 import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import livereload from "rollup-plugin-livereload";
 import svgo from "rollup-plugin-svgo";
@@ -47,6 +48,7 @@ export default [
       nodeResolve({
         browser: true,
       }),
+      commonjs(),
     ],
   },
   {
@@ -63,6 +65,7 @@ export default [
       nodeResolve({
         browser: true,
       }),
+      commonjs(),
     ],
   },
 ];
