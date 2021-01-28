@@ -38,13 +38,13 @@ There is no weird code styles, because most of the configuration is as basic as 
 First you have to install the required dependencies
 
 ```bash
-yarn install
+npm install
 ```
 
 Then you start the development script
 
 ```bash
-yarn run dev
+npm run dev
 ```
 
 Go to <http://localhost:5000>. Change some code in `./src/on-init.ts`, `./src/on-render.ts`, and `./src/design/svg-data-inkscape.svg`, and the website will update.
@@ -52,7 +52,7 @@ Go to <http://localhost:5000>. Change some code in `./src/on-init.ts`, `./src/on
 When the code is ready to be uploaded to Grafana, start the build script
 
 ```bash
-yarn run build
+npm run build
 ```
 
 Then go to `/dist` and copy the content of `panel-options.json` to the panels `Import/export` option.
