@@ -55,7 +55,7 @@ When the code is ready to be uploaded to Grafana, start the build script
 yarn run build
 ```
 
-Then go to `/dist` and copy the contents of the files to the corresponding options in the panel. (custom-properties.json to customProperties, ETC)
+Then go to `/dist` and copy the content of `panel-options.json` to the panels `Import/export` option.
 
 ## Dev site
 
