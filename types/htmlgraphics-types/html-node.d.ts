@@ -3,4 +3,9 @@
  *
  * It's a shadow root https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM.
  */
-declare const htmlNode: ShadowRoot;
+
+interface HTMLNode extends ShadowRoot {
+  onpanelupdate: () => void;
+}
+
+declare const htmlNode: HTMLNode;
