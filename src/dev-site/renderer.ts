@@ -39,8 +39,17 @@ function renderHandler() {
     "refresh-button"
   ) as HTMLDivElement;
 
+  const panelUpdateEvent = new CustomEvent("panelupdate");
+
+  window.onload = () => {
+    htmlNode.onpanelupdate();
+    htmlNode.dispatchEvent(panelUpdateEvent);
+  };
+
   refreshButton.onclick = async function () {
     updateData();
+    htmlNode.dispatchEvent(panelUpdateEvent);
+    htmlNode.onpanelupdate();
     if (!refreshButton.classList.contains("executed")) {
       console.warn(
         "Executing onRender through a Function object. Line numbers might be inaccurate."
