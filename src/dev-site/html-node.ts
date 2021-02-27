@@ -5,4 +5,4 @@ window.htmlNode = document
   .attachShadow({ mode: "open" }) as HTMLNode;
 
 htmlNode.onpanelupdate = () => null;
-htmlNode.innerHTML = `<style></style><div>${svgData}</div>`;
+htmlNode.innerHTML = `<style>@import "build/style.css"</style><div>${svgData}</div>`;
