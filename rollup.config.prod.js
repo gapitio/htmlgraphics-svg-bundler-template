@@ -2,6 +2,7 @@ import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import { terser } from "rollup-plugin-terser";
+import postcss from "rollup-plugin-postcss";
 
 const OUT_DIR = "dist";
 
@@ -14,6 +15,9 @@ export default [
       sourcemap: false,
     },
     plugins: [
+      postcss({
+        extract: "style.css",
+      }),
       typescript(),
       terser(),
       nodeResolve({

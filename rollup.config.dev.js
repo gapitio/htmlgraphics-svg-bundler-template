@@ -5,6 +5,7 @@ import livereload from "rollup-plugin-livereload";
 import svgo from "rollup-plugin-svgo";
 import svgoConfig from "./svgo.config";
 import json from "@rollup/plugin-json";
+import postcss from "rollup-plugin-postcss";
 
 const OUT_DIR = "public/build";
 
@@ -42,6 +43,9 @@ export default [
       sourcemap: true,
     },
     plugins: [
+      postcss({
+        extract: "style.css",
+      }),
       typescript({
         check: false,
       }),
