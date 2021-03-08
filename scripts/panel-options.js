@@ -1,4 +1,4 @@
-import { writeFileSync, readFileSync } from "fs";
+import { writeFileSync, readFileSync, existsSync } from "fs";
 import panelOptionsConfig from "../panel-options.config.js";
 
 const IN_PATHS = {
@@ -16,7 +16,11 @@ const panelOptions = panelOptionsConfig;
 function exportPanelOptions() {
   // Read in files
   for (const [key, path] of Object.entries(IN_PATHS)) {
-    panelOptions[key] = readFileSync(path, "utf8");
+    if (existsSync(path)) {
+      panelOptions[key] = readFileSync(path, "utf8");
+    } else {
+      console.warn(path + " does not exist, using default values.");
+    }
   }
 
   // Write out file
