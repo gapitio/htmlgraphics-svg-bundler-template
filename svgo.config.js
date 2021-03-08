@@ -2,107 +2,39 @@
 
 export default {
   plugins: [
-    {
-      cleanupAttrs: true,
-    },
-    {
-      removeDoctype: true,
-    },
-    {
-      removeXMLProcInst: true,
-    },
-    {
-      removeComments: true,
-    },
-    {
-      removeMetadata: true,
-    },
-    {
-      removeTitle: true,
-    },
-    {
-      removeDesc: true,
-    },
-    {
-      removeUselessDefs: true,
-    },
-    {
-      removeEditorsNSData: true,
-    },
-    {
-      removeEmptyAttrs: true,
-    },
-    {
-      removeHiddenElems: false,
-    },
-    {
-      removeEmptyText: false,
-    },
-    {
-      removeEmptyContainers: true,
-    },
-    {
-      removeViewBox: false,
-    },
-    {
-      cleanupEnableBackground: true,
-    },
-    {
-      convertStyleToAttrs: false,
-    },
-    {
-      convertColors: true,
-    },
-    {
-      convertPathData: true,
-    },
-    {
-      convertTransform: true,
-    },
-    {
-      removeUnknownsAndDefaults: true,
-    },
-    {
-      removeNonInheritableGroupAttrs: true,
-    },
-    {
-      removeUselessStrokeAndFill: true,
-    },
-    {
-      removeUnusedNS: true,
-    },
-    {
-      cleanupIDs: false,
-    },
-    {
-      cleanupNumericValues: true,
-    },
-    {
-      moveElemsAttrsToGroup: true,
-    },
-    {
-      moveGroupAttrsToElems: false,
-    },
-    {
-      collapseGroups: false,
-    },
-    {
-      removeRasterImages: false,
-    },
-    {
-      mergePaths: false,
-    },
-    {
-      convertShapeToPath: false,
-    },
-    {
-      sortAttrs: true,
-    },
-    {
-      removeDimensions: true,
-    },
-    {
-      removeAttrs: {},
-    },
+    "cleanupAttrs",
+    "removeDoctype",
+    "removeXMLProcInst",
+    "removeComments",
+    "removeMetadata",
+    "removeTitle",
+    "removeDesc",
+    "removeUselessDefs",
+    "removeEditorsNSData",
+    "removeEmptyAttrs",
+    // "removeHiddenElems",
+    // "removeEmptyText",
+    "removeEmptyContainers",
+    // "removeViewBox",
+    "cleanupEnableBackground",
+    // "convertStyleToAttrs",
+    "convertColors",
+    "convertPathData",
+    "convertTransform",
+    "removeUnknownsAndDefaults",
+    "removeNonInheritableGroupAttrs",
+    "removeUselessStrokeAndFill",
+    "removeUnusedNS",
+    // "cleanupIDs",
+    "cleanupNumericValues",
+    "moveElemsAttrsToGroup",
+    // "moveGroupAttrsToElems",
+    // "collapseGroups",
+    // "removeRasterImages",
+    // "mergePaths",
+    // "convertShapeToPath",
+    "sortAttrs",
+    "removeDimensions",
+    // { name: 'removeAttrs', params: { attrs: '(stroke|fill)' } },
   ],
 };
