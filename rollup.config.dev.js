@@ -2,7 +2,7 @@ import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import livereload from "rollup-plugin-livereload";
-import svgo from "rollup-plugin-svgo";
+import { optimize } from "svgo";
 import svgoConfig from "./svgo.config";
 import json from "@rollup/plugin-json";
 import postcss from "rollup-plugin-postcss";
@@ -73,3 +73,18 @@ export default [
     ],
   },
 ];
+
+function svgo(options) {
+  return {
+    name: "svgo",
+    transform: (code, id) => {
+      if (id.endsWith(".svg")) {
+        const result = optimize(code, { path: id, ...options });
+        return {
+          map: { mappings: "" },
+          code: "export default " + JSON.stringify(result.data),
+        };
+      }
+    },
+  };
+}
