@@ -1,6 +1,7 @@
 interface GrafanaTheme {
   isDark: boolean;
   isLight: boolean;
+  [key: string]: unknown;
 }
 
 /**
