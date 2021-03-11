@@ -1,5 +1,3 @@
-import { DataFrame, FieldType } from "@grafana/data";
-
 function createSeries(name: string, value: number, refId = "A"): DataFrame {
   return {
     name: name,
