@@ -2,8 +2,6 @@
 
 Bundler to make developing code easier and scalable.
 
-There is no weird code styles, because most of the configuration is as basic as it can be. A good example of this is by looking at the `.prettierrc.json` file.
-
 ## Table of contents
 
 - [Bundler](#bundler)
@@ -11,6 +9,7 @@ There is no weird code styles, because most of the configuration is as basic as 
   - [Contains](#contains)
   - [Usage](#usage)
   - [Dev site](#dev-site)
+  - [Eslint](#eslint)
 
 ## Contains
 
@@ -52,3 +51,26 @@ Then go to `/dist` and copy the content of `panel-options.json` to the panels `I
 To add custom series go to `src/dev-site/data.ts` and add createSeries() in series.
 
 Window has been used to get global variables like data, customProperties, ETC.
+
+## Eslint
+
+It's recommended to use the current eslint config, but as it's strongly opinionated it might be _easier_ to use a less opinionated config.
+
+Replace the current .eslint.cjs with the below code.
+
+```ts
+module.exports = {
+  env: {
+    node: true,
+    browser: true,
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+  ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  root: true,
+};
+```
