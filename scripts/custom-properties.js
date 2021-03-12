@@ -6,8 +6,9 @@ const OUT_PATH = "dist/custom-properties.json";
 function isValidJSONString(str) {
   try {
     JSON.parse(str);
-  } catch (e) {
-    console.error(e);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(error);
     return false;
   }
   return true;
@@ -18,8 +19,9 @@ function exportJSON() {
 
   if (isValidJSONString(customProperties)) {
     writeFileSync(OUT_PATH, customProperties);
-    console.log("Successfully written " + OUT_PATH);
+    // eslint-disable-next-line no-console
+    console.log(`Successfully written ${OUT_PATH}`);
   }
 }
 
-export default exportJSON();
+exportJSON();

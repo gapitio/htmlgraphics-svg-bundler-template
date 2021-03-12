@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
-
 declare type VariableType =
   | "query"
   | "adhoc"
@@ -34,6 +32,7 @@ interface TemplateSrv {
   replace(
     target?: string,
     scopedVars?: ScopedVars,
+    // eslint-disable-next-line @typescript-eslint/ban-types
     format?: string | Function
   ): string;
 }

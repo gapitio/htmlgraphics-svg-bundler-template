@@ -1,4 +1,4 @@
-import createSeries from "./create-series";
+import { createSeries } from "./create-series";
 
 function randomValue({ min = 0, max = 1 }): number {
   return Math.random() * (max - min) + min;

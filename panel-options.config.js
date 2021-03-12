@@ -1,4 +1,4 @@
-export default {
+export const defaultPanelOptions = {
   add100Percentage: true,
   centerAlignContent: true,
   overflow: "visible",

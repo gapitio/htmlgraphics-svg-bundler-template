@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 interface DateTimeBuiltinFormat {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   __momentBuiltinFormatBrand: any;
 }
 declare const ISO_8601: DateTimeBuiltinFormat;
