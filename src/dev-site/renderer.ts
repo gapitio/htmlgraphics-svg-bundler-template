@@ -36,9 +36,8 @@ async function renderHandler() {
 
   const onRender = await getOnRenderFunction();
 
-  const refreshButton = document.querySelector(
-    "#refresh-button"
-  ) as HTMLDivElement;
+  const refreshButton = document.querySelector("#refresh-button");
+  if (!refreshButton) throw new Error("Could not find refresh button.");
 
   const panelUpdateEvent = new CustomEvent("panelupdate");
 

@@ -3,15 +3,18 @@ function themeHandler() {
   const currentTheme = url.searchParams.get("theme");
 
   const lightThemeButton = document.querySelector("#light-theme-button");
-  const darkThemeButton = document.querySelector("#dark-theme-button");
+  if (!lightThemeButton) throw new Error("Could not find dark theme button.");
 
-  lightThemeButton?.addEventListener("click", () => {
+  const darkThemeButton = document.querySelector("#dark-theme-button");
+  if (!darkThemeButton) throw new Error("Could not find dark theme button.");
+
+  lightThemeButton.addEventListener("click", () => {
     url.searchParams.delete("theme");
     url.searchParams.append("theme", "light");
     window.location.href = url.href;
   });
 
-  darkThemeButton?.addEventListener("click", () => {
+  darkThemeButton.addEventListener("click", () => {
     url.searchParams.delete("theme");
     url.searchParams.append("theme", "dark");
     window.location.href = url.href;
