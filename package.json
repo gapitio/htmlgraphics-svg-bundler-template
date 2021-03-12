@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "run-s lint build:prod build:custom-properties build:svg-data build:panel-options",
+    "build": "run-s validate build:prod build:custom-properties build:svg-data build:panel-options",
     "build:custom-properties": "node --experimental-json-modules ./scripts/custom-properties.js",
     "build:dev": "rollup -c rollup.config.dev.js",
     "build:svg-data": "node ./scripts/svg-data.js",
@@ -19,6 +19,8 @@
     "lint:prettier": "prettier --check .",
     "serve": "sirv public --single --host",
     "serve:dev": "sirv public --single --host --dev",
+    "typecheck": "tsc --noEmit",
+    "validate": "run-p lint typecheck",
     "watch": "rollup -c rollup.config.dev.js -w"
   },
   "devDependencies": {
