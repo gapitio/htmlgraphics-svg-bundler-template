@@ -179,3 +179,6 @@ interface DataFrame extends QueryResultBase {
   fields: Field[];
   length: number;
 }
+
+/* eslint-enable @typescript-eslint/ban-types */
+/* eslint-enable @typescript-eslint/no-explicit-any */

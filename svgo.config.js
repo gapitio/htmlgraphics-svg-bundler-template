@@ -1,6 +1,6 @@
 // https://github.com/svg/svgo#what-it-can-do
 
-export default {
+export const svgoConfig = {
   plugins: [
     "cleanupAttrs",
     "removeDoctype",

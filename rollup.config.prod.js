@@ -6,6 +6,7 @@ import postcss from "rollup-plugin-postcss";
 
 const OUT_DIR = "dist";
 
+// eslint-disable-next-line import/no-default-export
 export default [
   {
     input: "src/on-init.ts",
