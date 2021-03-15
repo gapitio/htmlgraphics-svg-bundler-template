@@ -1,3 +1,14 @@
+import type { DataFrame } from "@grafana/data";
+
+enum FieldType {
+  time = "time",
+  number = "number",
+  string = "string",
+  boolean = "boolean",
+  trace = "trace",
+  other = "other",
+}
+
 export function createSeries(
   name: string,
   value: number,

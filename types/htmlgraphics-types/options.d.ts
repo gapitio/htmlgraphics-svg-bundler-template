@@ -1,6 +1,6 @@
 type EditorCodeType = string | undefined;
 
-interface OptionsInterface {
+export interface OptionsInterface {
   add100Percentage: boolean;
   centerAlignContent: boolean;
   SVGBaseFix: boolean;
@@ -10,8 +10,3 @@ interface OptionsInterface {
   onInit: EditorCodeType;
   customProperties: EditorCodeType;
 }
-
-/**
- * The panel options set.
- */
-declare const options: OptionsInterface;

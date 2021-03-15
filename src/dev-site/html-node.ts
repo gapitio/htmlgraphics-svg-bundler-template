@@ -1,3 +1,4 @@
+import type { HTMLNode } from "../../types/htmlgraphics-types/html-node";
 import svgData from "../design/svg-data.svg";
 
 const shadowContainer = document.querySelector("#shadow-container");
