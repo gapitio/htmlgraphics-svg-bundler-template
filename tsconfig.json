@@ -1,6 +1,7 @@
 {
   "include": ["./src/**/*", "./types"],
   "compilerOptions": {
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "module": "ESNext",
     "sourceMap": true,
