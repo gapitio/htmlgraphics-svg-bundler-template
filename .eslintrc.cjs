@@ -61,5 +61,7 @@ module.exports = {
 
     // Disallow duplicate conditions in if-else-if
     "no-dupe-else-if": "error",
+
+    "@typescript-eslint/consistent-type-imports": "error",
   },
 };
