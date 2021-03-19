@@ -18,7 +18,7 @@ async function makeRequest(url: string) {
 
 async function getOnRenderFunction() {
   // eslint-disable-next-line @typescript-eslint/ban-types
-  const ON_RENDER_PATH = "./build/on-render.js";
+  const ON_RENDER_PATH = "./build/onRender.js";
   const SOURCE_MAP_PATH = `${ON_RENDER_PATH}.map`;
 
   // Get the onRender code

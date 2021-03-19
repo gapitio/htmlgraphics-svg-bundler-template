@@ -9,7 +9,7 @@ const OUT_DIR = "dist";
 // eslint-disable-next-line import/no-default-export
 export default [
   {
-    input: "src/on-init.ts",
+    input: "src/onInit.ts",
     output: {
       dir: OUT_DIR,
       format: "iife",
@@ -28,7 +28,7 @@ export default [
     ],
   },
   {
-    input: "src/on-render.ts",
+    input: "src/onRender.ts",
     output: {
       dir: OUT_DIR,
       format: "iife",
