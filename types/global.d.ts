@@ -1,8 +1,8 @@
 import type { PanelData } from "@grafana/data";
-import type { OptionsInterface } from "./htmlgraphics-types/options";
+import type { OptionsInterface } from "./htmlgraphicsTypes/options";
 import type customPropertiesJSON from "../src/custom-properties.json";
-import type { HTMLNode } from "./htmlgraphics-types/html-node";
-import type { GrafanaTheme } from "./htmlgraphics-types/theme";
+import type { HTMLNode } from "./htmlgraphicsTypes/htmlNode";
+import type { GrafanaTheme } from "./htmlgraphicsTypes/theme";
 
 declare global {
   /**

@@ -36,6 +36,13 @@ module.exports = {
     // Common abbreviations are known and readable
     "unicorn/prevent-abbreviations": "off",
 
+    "unicorn/filename-case": [
+      "error",
+      {
+        cases: { camelCase: true, pascalCase: true },
+      },
+    ],
+
     // Disallow certain syntax forms
     "no-restricted-syntax": [
       "error",

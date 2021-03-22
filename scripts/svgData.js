@@ -3,8 +3,8 @@ import { optimize } from "svgo";
 // eslint-disable-next-line import/extensions
 import { svgoConfig } from "../svgo.config.js";
 
-const IN_PATH = "src/design/svg-data.svg";
-const OUT_PATH = "dist/svg-data.svg";
+const IN_PATH = "src/design/svgData.svg";
+const OUT_PATH = "dist/svgData.svg";
 
 const writeSVGData = () => {
   const svgData = readFileSync(IN_PATH, "utf8");

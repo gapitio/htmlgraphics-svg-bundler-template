@@ -1,5 +1,5 @@
 import type { TimeRange } from "@grafana/data";
-import { createSeries } from "./create-series";
+import { createSeries } from "./createSeries";
 
 function randomValue({ min = 0, max = 1 }): number {
   return Math.random() * (max - min) + min;

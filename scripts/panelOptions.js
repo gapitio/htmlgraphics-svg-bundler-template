@@ -1,15 +1,15 @@
 /* eslint-disable no-console */
 import { existsSync, readFileSync, writeFileSync } from "fs";
 // eslint-disable-next-line import/extensions
-import { defaultPanelOptions } from "../panel-options.config.js";
+import { defaultPanelOptions } from "../panelOptions.config.js";
 
 const INDENT = 2;
 
 const IN_PATHS = {
   css: "dist/style.css",
-  html: "dist/svg-data.svg",
-  onRender: "dist/on-render.js",
-  onInit: "dist/on-init.js",
+  html: "dist/svgData.svg",
+  onRender: "dist/onRender.js",
+  onInit: "dist/onInit.js",
   codeData: "dist/custom-properties.json",
 };
 

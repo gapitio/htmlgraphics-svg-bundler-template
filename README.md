@@ -34,7 +34,7 @@ Then you start the development script
 npm run dev
 ```
 
-Go to <http://localhost:5000>. Change some code in `./src/on-init.ts`, `./src/on-render.ts`, and `./src/design/svg-data-inkscape.svg`, and the website will update.
+Go to <http://localhost:5000>. Change some code in `./src/onInit.ts`, `./src/onRender.ts`, and `./src/design/svgData.svg`, and the website will update.
 
 When the code is ready to be uploaded to Grafana, start the build script
 
@@ -46,9 +46,9 @@ Then go to `/dist` and copy the content of `panel-options.json` to the panels `I
 
 ## Dev site
 
-`src/dev-site` is a folder where most of the configuration for the dev website is.
+`src/devSite` is a folder where most of the configuration for the dev website is.
 
-To add custom series go to `src/dev-site/data.ts` and add createSeries() in series.
+To add custom series go to `src/devSite/data.ts` and add createSeries() in series.
 
 Window has been used to get global variables like data, customProperties, ETC.
 
