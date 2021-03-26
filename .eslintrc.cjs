@@ -71,4 +71,12 @@ module.exports = {
 
     "@typescript-eslint/consistent-type-imports": "error",
   },
+  overrides: [
+    {
+      files: ["*.ts"],
+      extends: [
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      ],
+    },
+  ],
 };
