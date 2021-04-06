@@ -46,7 +46,7 @@ async function renderHandler() {
     htmlNode.dispatchEvent(panelUpdateEvent);
   });
 
-  refreshButton.addEventListener("click", async () => {
+  refreshButton.addEventListener("click", () => {
     updateData();
     htmlNode.dispatchEvent(panelUpdateEvent);
     htmlNode.onpanelupdate();
@@ -64,4 +64,4 @@ async function renderHandler() {
   });
 }
 
-renderHandler();
+await renderHandler();
