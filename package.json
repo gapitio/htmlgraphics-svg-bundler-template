@@ -20,7 +20,7 @@
     "serve": "sirv public --single --host",
     "serve:dev": "sirv public --single --host --dev",
     "typecheck": "tsc --noEmit",
-    "validate": "run-p lint typecheck",
+    "validate": "run-s typecheck lint",
     "watch": "rollup -c rollup.config.dev.js -w"
   },
   "devDependencies": {
