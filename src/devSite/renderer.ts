@@ -64,8 +64,8 @@ function renderHandler() {
       });
       return onRender;
     })
-    .catch(() => {
-      throw new Error("Something went wrong getting the onRender function");
+    .catch((error) => {
+      throw error;
     });
 }
 
