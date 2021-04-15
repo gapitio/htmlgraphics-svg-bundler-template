@@ -31,10 +31,8 @@ async function getOnRenderFunction() {
   return onRender;
 }
 
-async function renderHandler() {
+function renderHandler() {
   updateData();
-
-  const onRender = await getOnRenderFunction();
 
   const refreshButton = document.querySelector("#refresh-button");
   if (!refreshButton) throw new Error("Could not find refresh button.");
@@ -46,22 +44,29 @@ async function renderHandler() {
     htmlNode.dispatchEvent(panelUpdateEvent);
   });
 
-  refreshButton.addEventListener("click", () => {
-    updateData();
-    htmlNode.dispatchEvent(panelUpdateEvent);
-    htmlNode.onpanelupdate();
+  getOnRenderFunction()
+    .then((onRender) => {
+      refreshButton.addEventListener("click", () => {
+        updateData();
+        htmlNode.dispatchEvent(panelUpdateEvent);
+        htmlNode.onpanelupdate();
 
-    if (!refreshButton.classList.contains("executed")) {
-      // eslint-disable-next-line no-console
-      console.warn(
-        "Executing onRender through a Function object. Line numbers might be inaccurate."
-      );
+        if (!refreshButton.classList.contains("executed")) {
+          // eslint-disable-next-line no-console
+          console.warn(
+            "Executing onRender through a Function object. Line numbers might be inaccurate."
+          );
 
-      refreshButton.classList.add("executed");
-    }
+          refreshButton.classList.add("executed");
+        }
 
-    onRender();
-  });
+        onRender();
+      });
+      return onRender;
+    })
+    .catch((error) => {
+      throw error;
+    });
 }
 
-await renderHandler();
+renderHandler();
