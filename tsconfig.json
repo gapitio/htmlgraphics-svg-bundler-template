@@ -1,13 +1,15 @@
 {
-  "include": ["./src/**/*", "./types"],
   "compilerOptions": {
-    "skipLibCheck": true,
-    "moduleResolution": "node",
-    "module": "ESNext",
-    "sourceMap": true,
-    "target": "ESNext",
-    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "esModuleInterop": true,
-    "strict": true
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ESNext"
   }
 }
