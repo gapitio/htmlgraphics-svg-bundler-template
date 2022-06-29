@@ -1,5 +1,5 @@
 /*
-  Loads on-render and executes it each time the refresh button is pressed
+  Loads onRender and executes it each time the refresh button is pressed
 */
 
 import { updateData } from "./data";
