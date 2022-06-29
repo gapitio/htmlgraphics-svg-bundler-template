@@ -1,12 +1,45 @@
+/**
+ * @type {import("./types/htmlgraphicsTypes/options").OptionsInterface}
+ */
 export const defaultPanelOptions = {
+  calcsMutation: "standard",
+  reduceOptions: {
+    calcs: [
+      // Change `calcsMutation` to "custom" when changing the values
+      "lastNotNull",
+      "last",
+      "firstNotNull",
+      "first",
+      "min",
+      "max",
+      "mean",
+      "sum",
+      "count",
+      "range",
+      "delta",
+      "step",
+      "diff",
+      "logmin",
+      "allIsZero",
+      "allIsNull",
+      "diffperc",
+    ],
+  },
   add100Percentage: true,
   centerAlignContent: true,
   overflow: "visible",
   SVGBaseFix: true,
   codeData: "{}",
+  rootCSS: "",
   css: "",
   html: "",
+  renderOnMount: true,
   onRender: "",
+  dynamicHtmlGraphics: false,
   dynamicData: false,
+  dynamicFieldDisplayValues: false,
+  dynamicProps: false,
+  panelupdateOnMount: true,
+  onInitOnResize: false,
   onInit: "",
 };

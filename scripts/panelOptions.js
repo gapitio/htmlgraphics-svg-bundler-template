@@ -1,6 +1,4 @@
-/* eslint-disable no-console */
 import { existsSync, readFileSync, writeFileSync } from "fs";
-// eslint-disable-next-line import/extensions
 import { defaultPanelOptions } from "../panelOptions.config.js";
 
 const INDENT = 2;
@@ -36,4 +34,3 @@ function exportPanelOptions() {
 }
 
 exportPanelOptions();
-/* eslint-enable no-console */

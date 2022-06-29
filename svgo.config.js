@@ -1,5 +1,8 @@
 // https://github.com/svg/svgo#what-it-can-do
 
+/**
+ * @type {import("svgo").OptimizeOptions}
+ */
 export const svgoConfig = {
   plugins: [
     "cleanupAttrs",

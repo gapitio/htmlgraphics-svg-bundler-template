@@ -17,13 +17,11 @@ async function makeRequest(url: string) {
 }
 
 async function getOnRenderFunction() {
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  const ON_RENDER_PATH = "./build/onRender.js";
+  const ON_RENDER_PATH = "/src/onRender.ts";
   const SOURCE_MAP_PATH = `${ON_RENDER_PATH}.map`;
 
   // Get the onRender code
   const onRenderResponse = await makeRequest(ON_RENDER_PATH);
-  // eslint-disable-next-line @typescript-eslint/no-implied-eval
   const onRender = new Function(
     `${onRenderResponse}\n//# sourceMappingURL=${SOURCE_MAP_PATH}`
   );
@@ -52,7 +50,6 @@ function renderHandler() {
         htmlNode.onpanelupdate();
 
         if (!refreshButton.classList.contains("executed")) {
-          // eslint-disable-next-line no-console
           console.warn(
             "Executing onRender through a Function object. Line numbers might be inaccurate."
           );
