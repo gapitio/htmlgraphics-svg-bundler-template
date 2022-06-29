@@ -38,7 +38,6 @@ module.exports = {
         selector: "WithStatement",
       },
     ],
-    "react/no-array-index-key": "off",
     "unicorn/filename-case": [
       "error",
       { cases: { camelCase: true, pascalCase: true, kebabCase: true } },
@@ -47,7 +46,6 @@ module.exports = {
     "unicorn/prefer-module": "off",
     "unicorn/prefer-node-protocol": "off",
     "unicorn/prevent-abbreviations": "off", // Common abbreviations are known and readable
-    "unicorn/no-empty-file": "off",
   },
   overrides: [
     {
