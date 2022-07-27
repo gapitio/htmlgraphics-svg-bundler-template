@@ -34,7 +34,7 @@ Then you start the development script
 npm run dev
 ```
 
-Go to <http://localhost:5000>. Change some code in `./src/onInit.ts`, `./src/onRender.ts`, and `./src/design/svgData.svg`, and the website will update.
+Go to <http://localhost:5173>. Change some code in `./src/onInit.ts`, `./src/onRender.ts`, and `./src/design/svgData.svg`, and the website will update.
 
 When the code is ready to be uploaded to Grafana, start the build script
 
