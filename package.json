@@ -19,27 +19,27 @@
     "validate": "run-s typecheck lint"
   },
   "devDependencies": {
-    "@grafana/data": "^9.0.2",
+    "@grafana/data": "^9.0.5",
     "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
-    "@typescript-eslint/eslint-plugin": "^5.30.0",
-    "@typescript-eslint/parser": "^5.30.0",
-    "eslint": "^8.18.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^3.1.1",
+    "eslint-import-resolver-typescript": "^3.3.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-unicorn": "^42.0.0",
+    "eslint-plugin-unicorn": "^43.0.2",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
-    "rollup": "^2.75.7",
+    "rollup": "^2.77.2",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.32.1",
     "svgo": "^2.8.0",
     "typescript": "^4.7.4",
-    "vite": "^2.9.13"
+    "vite": "^3.0.3"
   }
 }
