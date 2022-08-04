@@ -9,4 +9,22 @@ window.htmlNode = shadowContainer.attachShadow({ mode: "open" }) as HTMLNode;
 htmlNode.onpanelupdate = () => {
   // Do nothing
 };
-htmlNode.innerHTML = `<style>@import "/src/style.css"</style>${html}`;
+
+htmlNode.innerHTML = `<style></style>${html}`;
+
+// Copy the styles in the document head into the shadow DOM
+const stylesNodes: Node[] = [];
+const observer = new MutationObserver((mutations) => {
+  for (const mutation of mutations) {
+    if (mutation.target === document.head) {
+      for (const n of mutation.addedNodes) {
+        stylesNodes.push(n);
+      }
+    }
+  }
+
+  htmlNode.children[0].innerHTML = stylesNodes
+    .map((s) => s.textContent)
+    .join("");
+});
+observer.observe(document.head, { childList: true, subtree: true });
