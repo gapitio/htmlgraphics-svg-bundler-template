@@ -12,6 +12,11 @@ htmlNode.onpanelupdate = () => {
 
 htmlNode.innerHTML = `<style></style>${html}`;
 
+if (window.options.add100Percentage) {
+  htmlNode.children[1].setAttribute("height", "100%");
+  htmlNode.children[1].setAttribute("width", "100%");
+}
+
 // Copy the styles in the document head into the shadow DOM
 const stylesNodes: Node[] = [];
 const observer = new MutationObserver((mutations) => {
