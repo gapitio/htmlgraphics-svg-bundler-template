@@ -1,0 +1,22 @@
+{
+  "panels": [
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "gridPos": {
+        "h": 34,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {},
+      "title": "Panel Title",
+      "type": "gapit-htmlgraphics-panel"
+    }
+  ],
+  "title": "auto-upload",
+  "uid": "abcdefghi"
+}

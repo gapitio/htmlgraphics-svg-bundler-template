@@ -74,3 +74,34 @@ module.exports = {
   root: true,
 };
 ```
+
+## Watcher
+
+The watcher pushes any changes directly to [Grafana](https://github.com/grafana/grafana).
+
+Create a `.env` file at the top level (in the same folder as this and package.json is) with the below contents.
+
+```env
+GRAFANA_URL=
+GRAFANA_ORG_ID=
+GRAFANA_TOKEN=
+```
+
+Example configuration:
+
+```env
+GRAFANA_URL=http://localhost:3100
+GRAFANA_ORG_ID="1"
+GRAFANA_TOKEN="glsa_BXohudtWX0kgqXaXe0mDDUzOndfsIdxz_1b6fd716"
+```
+
+- (new) To create service account and add a token to a service account follow this guide from Grafana [Service accounts](https://grafana.com/docs/grafana/latest/administration/service-accounts/).
+- (old) To create a token follow this guide from Grafana [API Keys](https://grafana.com/docs/grafana/latest/administration/api-keys/).
+
+Change the uid/title in the `panel.json` file.
+
+Run
+
+```bash
+npm run watch
+```
