@@ -18,13 +18,15 @@ const grafanaToken = process.env.GRAFANA_TOKEN;
 
 const panelOptions = defaultPanelOptions;
 
-const svgWatcher = watch("src/design/svgData.svg");
+const svgWatcher = watch("src/design/svgData.svg", { awaitWriteFinish: true });
 svgWatcher.on("change", (path) => {
   panelOptions.html = generateSvg(path);
   uploadPanel();
 });
 
-const customPropertiesWatcher = watch("src/custom-properties.json");
+const customPropertiesWatcher = watch("src/custom-properties.json", {
+  awaitWriteFinish: true,
+});
 customPropertiesWatcher.on("change", (path) => {
   panelOptions.codeData = generateCustomProperties(path);
   uploadPanel();
