@@ -18,14 +18,16 @@ const grafanaToken = process.env.GRAFANA_TOKEN;
 
 const panelOptions = defaultPanelOptions;
 
-const svgWatcher = watch("src/design/svgData.svg", { awaitWriteFinish: true });
+const svgWatcher = watch("src/design/svgData.svg", {
+  awaitWriteFinish: { stabilityThreshold: 50 },
+});
 svgWatcher.on("change", (path) => {
   panelOptions.html = generateSvg(path);
   uploadPanel();
 });
 
 const customPropertiesWatcher = watch("src/custom-properties.json", {
-  awaitWriteFinish: true,
+  awaitWriteFinish: { stabilityThreshold: 50 },
 });
 customPropertiesWatcher.on("change", (path) => {
   panelOptions.codeData = generateCustomProperties(path);
