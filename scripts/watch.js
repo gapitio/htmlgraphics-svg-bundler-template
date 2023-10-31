@@ -15,6 +15,7 @@ import { defaultPanelOptions } from "../panelOptions.config.js";
 const grafanaUrl = process.env.GRAFANA_URL;
 const grafanaOrgId = process.env.GRAFANA_ORG_ID;
 const grafanaToken = process.env.GRAFANA_TOKEN;
+const grafanaFolderUid = process.env.GRAFANA_FOLDER_UID;
 
 const panelOptions = defaultPanelOptions;
 
@@ -114,6 +115,7 @@ async function uploadPanel() {
     message: "Update from HTMLGraphics",
     overwrite: true,
   };
+  if(grafanaFolderUid !== "") bodyJson.folderUid = grafanaFolderUid;
 
   const response = await fetch(`${grafanaUrl}/api/dashboards/db`, {
     body: JSON.stringify(bodyJson),
