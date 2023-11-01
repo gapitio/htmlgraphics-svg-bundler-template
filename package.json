@@ -24,7 +24,7 @@
     "@gapit/element-color": "^0.0.0",
     "@gapit/grafana-metric": "^1.2.0",
     "@gapit/query-selector": "^0.1.0",
-    "@grafana/data": "^10.1.0",
+    "@grafana/data": "^10.1.1",
     "@grafana/runtime": "^10.1.1",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
