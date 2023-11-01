@@ -2,15 +2,6 @@
 
 Bundler to make developing code easier and scalable.
 
-## Table of contents
-
-- [Bundler](#bundler)
-  - [Table of contents](#table-of-contents)
-  - [Contains](#contains)
-  - [Usage](#usage)
-  - [Dev site](#dev-site)
-  - [Eslint](#eslint)
-
 ## Contains
 
 - [rollup.js](https://rollupjs.org/)
@@ -19,19 +10,25 @@ Bundler to make developing code easier and scalable.
 - [ESLint](https://eslint.org/)
 - [SVGO](https://github.com/svg/svgo)
 - Local development server to run the code live in the browser.
+- A watcher which pushes changes to Grafana.
+
+## Prerequisite
+
+- [node](https://nodejs.org/)
+- [pnpm](https://pnpm.io/)
 
 ## Usage
 
 First you have to install the required dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 Then you start the development script
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Go to <http://localhost:5173>. Change some code in `./src/onInit.ts`, `./src/onRender.ts`, and `./src/design/svgData.svg`, and the website will update.
@@ -39,7 +36,7 @@ Go to <http://localhost:5173>. Change some code in `./src/onInit.ts`, `./src/onR
 When the code is ready to be uploaded to Grafana, start the build script
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Then go to `/dist` and copy the content of `panel-options.json` to the panels `Import/export` option.
@@ -103,5 +100,5 @@ Change the uid/title in the `panel.json` file.
 Run
 
 ```bash
-npm run watch
+pnpm run watch
 ```
