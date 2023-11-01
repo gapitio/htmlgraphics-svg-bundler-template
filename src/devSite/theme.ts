@@ -1,3 +1,5 @@
+import { GrafanaTheme } from "@grafana/data";
+
 function themeHandler() {
   const url = new URL(window.location.href);
   const currentTheme = url.searchParams.get("theme");
@@ -32,6 +34,6 @@ function themeHandler() {
 window.theme = {
   isDark: false,
   isLight: true,
-};
+} as GrafanaTheme;
 
 themeHandler();
