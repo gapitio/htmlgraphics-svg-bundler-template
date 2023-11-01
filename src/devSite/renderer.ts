@@ -27,7 +27,7 @@ function renderHandler() {
     htmlNode.onpanelupdate();
 
     const script = document.querySelector<HTMLScriptElement>(
-      `script[src^="${onRenderUrl}"`
+      `script[src^="${onRenderUrl}"`,
     );
 
     const t = Number.parseInt(script?.src.split("/src/onRender.ts?")[1] ?? "");

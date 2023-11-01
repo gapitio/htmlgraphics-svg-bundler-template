@@ -2,3 +2,4 @@ dist
 coverage
 design
 local
+pnpm-lock.yaml

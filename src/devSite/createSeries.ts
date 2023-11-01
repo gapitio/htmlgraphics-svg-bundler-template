@@ -12,7 +12,7 @@ enum FieldType {
 export function createSeries(
   name: string,
   value: number,
-  refId = "A"
+  refId = "A",
 ): DataFrame {
   return {
     name,

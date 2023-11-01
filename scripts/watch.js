@@ -115,7 +115,7 @@ async function uploadPanel() {
     message: "Update from HTMLGraphics",
     overwrite: true,
   };
-  if(grafanaFolderUid !== "") bodyJson.folderUid = grafanaFolderUid;
+  if (grafanaFolderUid !== "") bodyJson.folderUid = grafanaFolderUid;
 
   const response = await fetch(`${grafanaUrl}/api/dashboards/db`, {
     body: JSON.stringify(bodyJson),
