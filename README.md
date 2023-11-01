@@ -82,6 +82,7 @@ Create a `.env` file at the top level (in the same folder as this and package.js
 GRAFANA_URL=
 GRAFANA_ORG_ID=
 GRAFANA_TOKEN=
+GRAFANA_FOLDER_UID=
 ```
 
 Example configuration:
@@ -90,6 +91,7 @@ Example configuration:
 GRAFANA_URL=http://localhost:3100
 GRAFANA_ORG_ID="1"
 GRAFANA_TOKEN="glsa_BXohudtWX0kgqXaXe0mDDUzOndfsIdxz_1b6fd716"
+GRAFANA_FOLDER_UID=l3KqBxCMz
 ```
 
 - (new) To create service account and add a token to a service account follow this guide from Grafana [Service accounts](https://grafana.com/docs/grafana/latest/administration/service-accounts/).
