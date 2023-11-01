@@ -1,8 +1,7 @@
-import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import typescript from "rollup-plugin-typescript2";
-import { terser } from "rollup-plugin-terser";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 import postcss from "rollup-plugin-postcss";
+import { swc } from "rollup-plugin-swc3";
 
 const OUT_DIR = "dist";
 
@@ -19,8 +18,7 @@ export default [
       postcss({
         extract: "style.css",
       }),
-      typescript(),
-      terser(),
+      swc(),
       nodeResolve({
         browser: true,
       }),
@@ -35,8 +33,7 @@ export default [
       sourcemap: false,
     },
     plugins: [
-      typescript(),
-      terser(),
+      swc(),
       nodeResolve({
         browser: true,
       }),
