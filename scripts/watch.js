@@ -83,7 +83,7 @@ async function generateBundle(output) {
   for (const chunkOrAsset of output) {
     if (chunkOrAsset.type === "asset") {
       if (chunkOrAsset.fileName === "style.css") {
-        panelOptions.style = chunkOrAsset.source;
+        panelOptions.css = String(chunkOrAsset.source);
       } else {
         console.warn(
           `Asset ${chunkOrAsset.fileName} is not valid in HTMLGraphics`,
