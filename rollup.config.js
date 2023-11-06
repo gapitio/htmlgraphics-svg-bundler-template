@@ -18,7 +18,9 @@ export default [
       postcss({
         extract: "style.css",
       }),
-      swc(),
+      swc({
+        minify: true,
+      }),
       nodeResolve({
         browser: true,
       }),
@@ -33,7 +35,9 @@ export default [
       sourcemap: false,
     },
     plugins: [
-      swc(),
+      swc({
+        minify: true,
+      }),
       nodeResolve({
         browser: true,
       }),
