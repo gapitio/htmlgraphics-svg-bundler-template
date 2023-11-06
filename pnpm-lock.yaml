@@ -5,6 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@gapit/click-component':
+    specifier: ^0.0.1
+    version: 0.0.1
+  '@gapit/element-color':
+    specifier: ^0.0.0
+    version: 0.0.0
+  '@gapit/grafana-metric':
+    specifier: ^1.2.0
+    version: 1.2.0
+  '@gapit/query-selector':
+    specifier: ^0.1.0
+    version: 0.1.0
   '@grafana/data':
     specifier: ^10.2.0
     version: 10.2.0(react-dom@18.2.0)(react@17.0.2)
@@ -525,6 +537,24 @@ packages:
     resolution: {integrity: sha512-BGdtJFmaNJy5An/Zan4OId/yR9Ih1OojFjcduX/xOvq798OgWSyDtd6Qd5jqJXwJs1ipe4Fxu9+cshic5Ox2tA==}
     dependencies:
       tslib: 2.6.0
+    dev: true
+
+  /@gapit/click-component@0.0.1:
+    resolution: {integrity: sha512-+mzeJA3MgIEQMJbQGbaqO4aMxYhjUfgMcZD61kNhjOrkg9707KLCdtssUEcXBZW58w6ydNE3JCfXMJUY6L+iQg==}
+    dependencies:
+      '@gapit/element-color': 0.0.0
+    dev: true
+
+  /@gapit/element-color@0.0.0:
+    resolution: {integrity: sha512-AC1HMpZ5MjZd89elaQzWcpGCwUKuBpzXoE/vVrH00xGt4zzUKTULjoQ0cUIx7PZRDCBWBoIauvZ4iOTd25+fnw==}
+    dev: true
+
+  /@gapit/grafana-metric@1.2.0:
+    resolution: {integrity: sha512-zPUCG5/wH7hfpXsV9Wug2pBNY4sGAbZaqzoBIlYqcXJiesOK1powt6KsjEaCIJnFOGkmMEKJ51jD3NhV453kqA==}
+    dev: true
+
+  /@gapit/query-selector@0.1.0:
+    resolution: {integrity: sha512-MFtrhPUC6b6D1IbH+CDVvwxfBzk6IDdCbFNggH1fYhSivBdxn3HTqUdzkmOwZ8pFcHarrZWrGGW4f/PJ+ooOrg==}
     dev: true
 
   /@grafana/data@10.2.0(react-dom@18.2.0)(react@17.0.2):

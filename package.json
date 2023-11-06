@@ -20,6 +20,10 @@
     "watch": "node ./scripts/watch.js"
   },
   "devDependencies": {
+    "@gapit/click-component": "^0.0.1",
+    "@gapit/element-color": "^0.0.0",
+    "@gapit/grafana-metric": "^1.2.0",
+    "@gapit/query-selector": "^0.1.0",
     "@grafana/data": "^10.2.0",
     "@grafana/runtime": "^10.2.0",
     "@rollup/plugin-commonjs": "^25.0.7",
