@@ -5,7 +5,6 @@ import { svgoConfig } from "./svgo.config.js";
 function svgo(options) {
   return {
     name: "svgo",
-    // eslint-disable-next-line consistent-return
     transform: (code, id) => {
       if (id.endsWith(".svg")) {
         const result = optimize(code, { path: id, ...options });

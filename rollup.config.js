@@ -5,7 +5,6 @@ import { swc } from "rollup-plugin-swc3";
 
 const OUT_DIR = "dist";
 
-// eslint-disable-next-line import/no-default-export
 export default [
   {
     input: "src/onInit.ts",
