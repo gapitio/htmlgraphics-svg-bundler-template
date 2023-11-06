@@ -16,6 +16,7 @@ export default [
     plugins: [
       postcss({
         extract: "style.css",
+        minimize: true,
       }),
       swc({
         minify: true,
